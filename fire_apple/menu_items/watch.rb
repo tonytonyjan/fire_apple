@@ -4,7 +4,7 @@ module FireApple
     file_chooser = javax.swing.JFileChooser.new
     file_chooser.file_selection_mode = javax.swing.JFileChooser::DIRECTORIES_ONLY
     WATCH.add_action_listener do |event|
-      if file_chooser.showOpenDialog nil == javax.swing.JFileChooser::APPROVE_OPTION
+      if file_chooser.showOpenDialog(nil) == javax.swing.JFileChooser::APPROVE_OPTION
         # TODO
         ::FireApple.middleman 'server'
         # ::Middleman::PreviewServer.stop
